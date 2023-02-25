@@ -9,7 +9,6 @@ class StartViewModel {
     
 
     func pushSingInViewController() {
-        
         self.nextController.accept(())
     }
 }

@@ -17,3 +17,4 @@ struct MovieResultModel {
     var voteAverage: Double
     var voteCount: Int
 }
+
