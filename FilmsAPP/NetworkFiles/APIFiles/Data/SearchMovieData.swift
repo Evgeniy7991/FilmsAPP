@@ -7,6 +7,7 @@ struct SearchMovieData: Decodable {
 }
 struct MovieResultData: Decodable {
     
+    var title: String?
     var mainImage: String?
     var genresList: [Int]?
     var id: Int?
@@ -18,6 +19,7 @@ struct MovieResultData: Decodable {
     var voteCount: Int?
     
     enum CodingKeys: String, CodingKey {
+        case title
         case mainImage = "backdrop_path"
         case genresList = "genre_ids"
         case id

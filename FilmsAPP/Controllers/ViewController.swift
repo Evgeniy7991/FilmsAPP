@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
@@ -22,10 +23,13 @@ class ViewController: UIViewController {
         UIColor.systemCyan
     ]
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var collection: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageView.kf.setImage(with: URL(string: "https://www.themoviedb.org/t/p/w154/uozb2VeD87YmhoUP1RrGWfzuCrr.jpg"))
         
         setValues()
         

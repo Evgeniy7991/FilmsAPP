@@ -26,6 +26,13 @@
 		3EABF85A299A07FD00AAEA56 /* SomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABF859299A07FD00AAEA56 /* SomeTableViewCell.swift */; };
 		3EABF85C299A080E00AAEA56 /* SomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABF85B299A080E00AAEA56 /* SomeCollectionViewCell.swift */; };
 		3EABF85F299A0AA400AAEA56 /* SomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABF85E299A0AA400AAEA56 /* SomeViewModel.swift */; };
+		3EB26D5029A8AB3F0077E331 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB26D4F29A8AB3F0077E331 /* FireBaseManager.swift */; };
+		3ED8781D29A75BB500221E92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ED8781C29A75BB500221E92 /* GoogleService-Info.plist */; };
+		3ED8781F29A760A700221E92 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8781E29A760A700221E92 /* StartViewController.swift */; };
+		3ED8782129A7652B00221E92 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8782029A7652B00221E92 /* LogInViewController.swift */; };
+		3ED8782329A7656400221E92 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8782229A7656400221E92 /* AuthViewController.swift */; };
+		3ED8782629A772BF00221E92 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8782529A772BF00221E92 /* User.swift */; };
+		3ED8782A29A7774900221E92 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8782929A7774900221E92 /* StartViewModel.swift */; };
 		A3AAE3850DB75D486F5978A7 /* Pods_FilmsAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A7C45A5FECFD1B176AF002 /* Pods_FilmsAPP.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +59,13 @@
 		3EABF859299A07FD00AAEA56 /* SomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeTableViewCell.swift; sourceTree = "<group>"; };
 		3EABF85B299A080E00AAEA56 /* SomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		3EABF85E299A0AA400AAEA56 /* SomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewModel.swift; sourceTree = "<group>"; };
+		3EB26D4F29A8AB3F0077E331 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
+		3ED8781C29A75BB500221E92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3ED8781E29A760A700221E92 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		3ED8782029A7652B00221E92 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		3ED8782229A7656400221E92 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		3ED8782529A772BF00221E92 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3ED8782929A7774900221E92 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		58A7C45A5FECFD1B176AF002 /* Pods_FilmsAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmsAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C648AA853701E2B39FF67755 /* Pods-FilmsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmsAPP.debug.xcconfig"; path = "Target Support Files/Pods-FilmsAPP/Pods-FilmsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,15 +103,15 @@
 		3E2E9D582998CDBE00B6EA25 /* FilmsAPP */ = {
 			isa = PBXGroup;
 			children = (
+				3EA2DD70299A228D00933156 /* FilesAPP */,
 				3EA2DD73299A22BC00933156 /* Controllers */,
 				3EA2DD71299A229800933156 /* Views */,
-				3EA2DD70299A228D00933156 /* FilesAPP */,
 				3EABF85D299A0A8E00AAEA56 /* ViewModels */,
 				3EABF858299A079700AAEA56 /* NetworkFiles */,
 				3EABF857299A078800AAEA56 /* Cells */,
-				3E2E9D6D2998CDF800B6EA25 /* Managers */,
 				3E2E9D622998CDC000B6EA25 /* Assets.xcassets */,
 				3E2E9D672998CDC000B6EA25 /* Info.plist */,
+				3ED8781C29A75BB500221E92 /* GoogleService-Info.plist */,
 			);
 			path = FilmsAPP;
 			sourceTree = "<group>";
@@ -106,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				3E2E9D6E2998CE1000B6EA25 /* NetworkManager.swift */,
+				3EB26D4F29A8AB3F0077E331 /* FireBaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -160,6 +175,9 @@
 			children = (
 				3EABF855299A072900AAEA56 /* SomeViewController.swift */,
 				3E2E9D5D2998CDBF00B6EA25 /* ViewController.swift */,
+				3ED8781E29A760A700221E92 /* StartViewController.swift */,
+				3ED8782029A7652B00221E92 /* LogInViewController.swift */,
+				3ED8782229A7656400221E92 /* AuthViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,9 +195,9 @@
 		3EABF858299A079700AAEA56 /* NetworkFiles */ = {
 			isa = PBXGroup;
 			children = (
-				3E2E9D7F2998D44300B6EA25 /* ConverterDataToModel.swift */,
-				3E2E9D782998D1B100B6EA25 /* Models */,
-				3E2E9D702998D13D00B6EA25 /* Data */,
+				3ED8782829A773DB00221E92 /* FireBaseFiles */,
+				3E2E9D6D2998CDF800B6EA25 /* Managers */,
+				3ED8782729A772EA00221E92 /* APIFiles */,
 			);
 			path = NetworkFiles;
 			sourceTree = "<group>";
@@ -189,8 +207,35 @@
 			children = (
 				3EABF85E299A0AA400AAEA56 /* SomeViewModel.swift */,
 				3EA2DD74299A236400933156 /* TableCellViewModel.swift */,
+				3ED8782929A7774900221E92 /* StartViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3ED8782429A772AA00221E92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3ED8782529A772BF00221E92 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3ED8782729A772EA00221E92 /* APIFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3E2E9D7F2998D44300B6EA25 /* ConverterDataToModel.swift */,
+				3E2E9D782998D1B100B6EA25 /* Models */,
+				3E2E9D702998D13D00B6EA25 /* Data */,
+			);
+			path = APIFiles;
+			sourceTree = "<group>";
+		};
+		3ED8782829A773DB00221E92 /* FireBaseFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3ED8782429A772AA00221E92 /* Models */,
+			);
+			path = FireBaseFiles;
 			sourceTree = "<group>";
 		};
 		DE69E45E3372BB203B8463AC /* Pods */ = {
@@ -221,7 +266,7 @@
 				3E2E9D522998CDBE00B6EA25 /* Sources */,
 				3E2E9D532998CDBE00B6EA25 /* Frameworks */,
 				3E2E9D542998CDBE00B6EA25 /* Resources */,
-				3E0A421F7D671A71E1703D83 /* [CP] Embed Pods Frameworks */,
+				6B6253F58868E24834778F29 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E2E9D662998CDC000B6EA25 /* LaunchScreen.storyboard in Resources */,
+				3ED8781D29A75BB500221E92 /* GoogleService-Info.plist in Resources */,
 				3E2E9D632998CDC000B6EA25 /* Assets.xcassets in Resources */,
 				3E2E9D612998CDBF00B6EA25 /* Main.storyboard in Resources */,
 			);
@@ -279,23 +325,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3E0A421F7D671A71E1703D83 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FilmsAPP/Pods-FilmsAPP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FilmsAPP/Pods-FilmsAPP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FilmsAPP/Pods-FilmsAPP-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		58F322ECEDC1B75D0E1F3C8A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -318,6 +347,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6B6253F58868E24834778F29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FilmsAPP/Pods-FilmsAPP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FilmsAPP/Pods-FilmsAPP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FilmsAPP/Pods-FilmsAPP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -327,14 +373,20 @@
 			files = (
 				3E2E9D7A2998D3B700B6EA25 /* SearchMovieModel .swift in Sources */,
 				3E2E9D722998D15500B6EA25 /* SearchMovieData.swift in Sources */,
+				3EB26D5029A8AB3F0077E331 /* FireBaseManager.swift in Sources */,
+				3ED8782129A7652B00221E92 /* LogInViewController.swift in Sources */,
 				3EABF85F299A0AA400AAEA56 /* SomeViewModel.swift in Sources */,
 				3E9A13D82999539300464EEE /* CollectionViewCell.swift in Sources */,
 				3EABF856299A072A00AAEA56 /* SomeViewController.swift in Sources */,
 				3E2E9D7E2998D42200B6EA25 /* ListOfGenresModel.swift in Sources */,
+				3ED8782A29A7774900221E92 /* StartViewModel.swift in Sources */,
 				3EA2DD75299A236400933156 /* TableCellViewModel.swift in Sources */,
+				3ED8782329A7656400221E92 /* AuthViewController.swift in Sources */,
 				3E2E9D6F2998CE1000B6EA25 /* NetworkManager.swift in Sources */,
 				3E2E9D772998D18D00B6EA25 /* ListOfGenresData.swift in Sources */,
 				3EABF85A299A07FD00AAEA56 /* SomeTableViewCell.swift in Sources */,
+				3ED8782629A772BF00221E92 /* User.swift in Sources */,
+				3ED8781F29A760A700221E92 /* StartViewController.swift in Sources */,
 				3E2E9D5E2998CDBF00B6EA25 /* ViewController.swift in Sources */,
 				3E2E9D5A2998CDBF00B6EA25 /* AppDelegate.swift in Sources */,
 				3EABF85C299A080E00AAEA56 /* SomeCollectionViewCell.swift in Sources */,
