@@ -14,6 +14,4 @@ class SomeViewModel {
             print(error.localizedDescription)
         }
     }
-    
-    
 }

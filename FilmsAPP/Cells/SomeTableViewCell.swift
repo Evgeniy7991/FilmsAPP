@@ -5,33 +5,42 @@ import RxCocoa
 class SomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var someCollectionView: UICollectionView!
+    @IBOutlet weak var genreLabel: UILabel!
+    
     static let identifire = "SomeTableViewCell"
     
     let cellViewModel = TableCellViewModel()
-    let dispozeBag = DisposeBag()
+
+    var dispozeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
 
+    override func prepareForReuse() {
+//        dispozeBag = DisposeBag()
+//        cellViewModel.movies.accept([])
+    
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(text: String) {
-        self.textLabel?.text = text
+    func configureLabel(model: GenresModel) {
+        genreLabel.text = "Genre of movies - \(model.name)"
+        
     }
     
     func configureCollection() {
         someCollectionView.delegate = nil
         someCollectionView.dataSource = nil
-        
         cellViewModel.movies
             .bind(to: someCollectionView.rx.items(cellIdentifier: SomeCollectionViewCell.identifire, cellType: SomeCollectionViewCell.self)) {
                 row, viewModel, cell in
-                
-                cell.configureLabel(name: viewModel.overview)
+                cell.configureLabel(model: viewModel)
+                cell.configureImageView(model: viewModel)
             }
             .disposed(by: dispozeBag)
     }
@@ -42,14 +51,24 @@ class SomeTableViewCell: UITableViewCell {
             .rx
             .willDisplayCell
             .subscribe { indexPath in
+                
+                
                 guard let element = indexPath.element else { return }
                 if element.at.row == self.cellViewModel.movies.value.count - 1 {
-                    print(self.cellViewModel.page.value! + 1)
-                    self.cellViewModel.sendRequest(page: self.cellViewModel.page.value! + 1, genre: genres)
+                    print(self.cellViewModel.page)
+                    self.cellViewModel.sendRequest(page: self.cellViewModel.page, genre: genres)
                     print("Items \(indexPath)")
-                    self.someCollectionView.reloadData()
                 }
             }
             .disposed(by: dispozeBag)
+        
+        
+        someCollectionView
+            .rx
+            
+            
+            
+            
+            
     }
 }

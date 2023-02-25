@@ -12,19 +12,22 @@ class ConverterDataToModel {
                 
         for item in results {
             
-            guard let id = item.id,
-                  let logo = item.logo,
-                  let mainImage = item.mainImage,
-                  let overview = item.overview,
-                  let genresList = item.genresList,
-                  let popularity = item.popularity,
-                  let releaseDate = item.releaseDate,
-                  let voteAverage = item.voteAverage,
-                  let voteCount = item.voteCount else {
+            guard
+                let title = item.title,
+                let id = item.id,
+                let logo = item.logo,
+                let mainImage = item.mainImage,
+                let overview = item.overview,
+                let genresList = item.genresList,
+                let popularity = item.popularity,
+                let releaseDate = item.releaseDate,
+                let voteAverage = item.voteAverage,
+                let voteCount = item.voteCount else {
                 
                 return nil
             }
             let movieModel: MovieResultModel = MovieResultModel(
+                title: title,
                 mainImage: mainImage,
                 genresList: genresList,
                 id: id,
@@ -64,7 +67,6 @@ class ConverterDataToModel {
                 type: type,
                 id: id
             )
-            
             newVideoResults.append(videoResultModel)
         }
         return.init(results: newVideoResults)

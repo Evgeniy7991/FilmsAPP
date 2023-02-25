@@ -6,7 +6,7 @@ struct SearchMovieModel {
 }
 
 struct MovieResultModel {
-    
+    var title: String
     var mainImage: String
     var genresList: [Int]
     var id: Int
