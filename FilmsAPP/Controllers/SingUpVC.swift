@@ -15,7 +15,7 @@ class SingUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        bindViewModel()
     }
     
     private func bindViewModel() {
@@ -44,18 +44,19 @@ class SingUpVC: UIViewController {
         singUpViewModel.fireBaseManager.authResultObservable
             .subscribe { [weak self] result in
                 switch result {
-                case :
+                case .success :
+                    self?.showAlert(title: "Success", message: "User is auth was succes")
+                case .failure(let error):
+                    self?.showAlert(title: "Error", message: error.localizedDescription)
                 }
             }
-        
-        
+            .disposed(by: singUpViewModel.disposeBag)
     }
     
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(action)
-        present(alert, animated: true)
-    }
-    
+//    private func showAlert(title: String, message: String) {
+//        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//        let action = UIAlertAction(title: "OK", style: .default)
+//        alert.addAction(action)
+//        present(alert, animated: true)
+//    }
 }

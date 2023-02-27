@@ -6,6 +6,7 @@ class SomeViewModel {
     
     let networkManager = NetworkManager.shared
     let genresArray = BehaviorRelay<[GenresModel]>(value: [])
+    let selectedMovie = BehaviorRelay<GenresModel?>(value: nil)
     
     func setup() {
         networkManager.sendGenresRequest { listOfGenresModel in
@@ -14,4 +15,6 @@ class SomeViewModel {
             print(error.localizedDescription)
         }
     }
+    
+    
 }

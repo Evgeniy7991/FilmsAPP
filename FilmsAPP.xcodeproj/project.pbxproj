@@ -25,6 +25,10 @@
 		3E91E06729AA475000BF63B8 /* SingInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E91E06629AA475000BF63B8 /* SingInVC.swift */; };
 		3E95D42429AA44130038AA6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E95D42329AA44130038AA6A /* GoogleService-Info.plist */; };
 		3E9A13D82999539300464EEE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9A13D72999539300464EEE /* CollectionViewCell.swift */; };
+		3E9D274629ACA06B00BD2319 /* SingInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D274529ACA06B00BD2319 /* SingInViewModel.swift */; };
+		3E9D274929ACAD1800BD2319 /* UIViewController + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D274829ACAD1800BD2319 /* UIViewController + extension.swift */; };
+		3E9D274B29ACCC8200BD2319 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D274A29ACCC8200BD2319 /* DetailVC.swift */; };
+		3E9D274D29ACD16600BD2319 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D274C29ACD16600BD2319 /* DetailViewModel.swift */; };
 		3EA2941E29AA70B800156A05 /* SingUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2941D29AA70B800156A05 /* SingUpViewModel.swift */; };
 		3EA2DD75299A236400933156 /* TableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2DD74299A236400933156 /* TableCellViewModel.swift */; };
 		3EABF856299A072A00AAEA56 /* SomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABF855299A072900AAEA56 /* SomeViewController.swift */; };
@@ -59,6 +63,10 @@
 		3E91E06629AA475000BF63B8 /* SingInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInVC.swift; sourceTree = "<group>"; };
 		3E95D42329AA44130038AA6A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E9A13D72999539300464EEE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		3E9D274529ACA06B00BD2319 /* SingInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewModel.swift; sourceTree = "<group>"; };
+		3E9D274829ACAD1800BD2319 /* UIViewController + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + extension.swift"; sourceTree = "<group>"; };
+		3E9D274A29ACCC8200BD2319 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		3E9D274C29ACD16600BD2319 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		3EA2941D29AA70B800156A05 /* SingUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewModel.swift; sourceTree = "<group>"; };
 		3EA2DD74299A236400933156 /* TableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellViewModel.swift; sourceTree = "<group>"; };
 		3EABF855299A072900AAEA56 /* SomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +113,7 @@
 		3E2E9D582998CDBE00B6EA25 /* FilmsAPP */ = {
 			isa = PBXGroup;
 			children = (
+				3E9D274729ACACEC00BD2319 /* Extensions */,
 				3EA2DD70299A228D00933156 /* FilesAPP */,
 				3EA2DD73299A22BC00933156 /* Controllers */,
 				3EA2DD71299A229800933156 /* Views */,
@@ -147,6 +156,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		3E9D274729ACACEC00BD2319 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E9D274829ACAD1800BD2319 /* UIViewController + extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3EA2DD70299A228D00933156 /* FilesAPP */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +197,7 @@
 				3E91E06229AA45CD00BF63B8 /* StrartVC.swift */,
 				3E91E06429AA473D00BF63B8 /* SingUpVC.swift */,
 				3E91E06629AA475000BF63B8 /* SingInVC.swift */,
+				3E9D274A29ACCC8200BD2319 /* DetailVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,9 +226,11 @@
 			isa = PBXGroup;
 			children = (
 				3EABF85E299A0AA400AAEA56 /* SomeViewModel.swift */,
-				3EA2DD74299A236400933156 /* TableCellViewModel.swift */,
 				3ED8782929A7774900221E92 /* StartViewModel.swift */,
 				3EA2941D29AA70B800156A05 /* SingUpViewModel.swift */,
+				3E9D274529ACA06B00BD2319 /* SingInViewModel.swift */,
+				3EA2DD74299A236400933156 /* TableCellViewModel.swift */,
+				3E9D274C29ACD16600BD2319 /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -378,6 +398,8 @@
 				3E2E9D722998D15500B6EA25 /* SearchMovieData.swift in Sources */,
 				3EB26D5029A8AB3F0077E331 /* FireBaseManager.swift in Sources */,
 				3EA2941E29AA70B800156A05 /* SingUpViewModel.swift in Sources */,
+				3E9D274D29ACD16600BD2319 /* DetailViewModel.swift in Sources */,
+				3E9D274629ACA06B00BD2319 /* SingInViewModel.swift in Sources */,
 				3EABF85F299A0AA400AAEA56 /* SomeViewModel.swift in Sources */,
 				3E91E06729AA475000BF63B8 /* SingInVC.swift in Sources */,
 				3E9A13D82999539300464EEE /* CollectionViewCell.swift in Sources */,
@@ -388,6 +410,7 @@
 				3E2E9D6F2998CE1000B6EA25 /* NetworkManager.swift in Sources */,
 				3E2E9D772998D18D00B6EA25 /* ListOfGenresData.swift in Sources */,
 				3EABF85A299A07FD00AAEA56 /* SomeTableViewCell.swift in Sources */,
+				3E9D274B29ACCC8200BD2319 /* DetailVC.swift in Sources */,
 				3ED8782629A772BF00221E92 /* User.swift in Sources */,
 				3E2E9D5E2998CDBF00B6EA25 /* ViewController.swift in Sources */,
 				3E91E06329AA45CD00BF63B8 /* StrartVC.swift in Sources */,
@@ -397,6 +420,7 @@
 				3E2E9D802998D44300B6EA25 /* ConverterDataToModel.swift in Sources */,
 				3E2E9D752998D17A00B6EA25 /* VideosData.swift in Sources */,
 				3E2E9D7C2998D3D600B6EA25 /* VideosModel.swift in Sources */,
+				3E9D274929ACAD1800BD2319 /* UIViewController + extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

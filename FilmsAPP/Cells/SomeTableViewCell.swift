@@ -6,22 +6,18 @@ class SomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var someCollectionView: UICollectionView!
     @IBOutlet weak var genreLabel: UILabel!
-    
     static let identifire = "SomeTableViewCell"
-    
     let cellViewModel = TableCellViewModel()
-
     var dispozeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
-
+    
     override func prepareForReuse() {
 //        dispozeBag = DisposeBag()
 //        cellViewModel.movies.accept([])
-    
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,7 +26,6 @@ class SomeTableViewCell: UITableViewCell {
     
     func configureLabel(model: GenresModel) {
         genreLabel.text = "Genre of movies - \(model.name)"
-        
     }
     
     func configureCollection() {
@@ -46,13 +41,10 @@ class SomeTableViewCell: UITableViewCell {
     }
     
     func configureDisplay(genres: Int) {
-        
         someCollectionView
             .rx
             .willDisplayCell
             .subscribe { indexPath in
-                
-                
                 guard let element = indexPath.element else { return }
                 if element.at.row == self.cellViewModel.movies.value.count - 1 {
                     print(self.cellViewModel.page)
@@ -61,14 +53,17 @@ class SomeTableViewCell: UITableViewCell {
                 }
             }
             .disposed(by: dispozeBag)
-        
-        
+    }
+    
+    func selectItem(completion: @escaping(MovieResultModel)->()) {
         someCollectionView
             .rx
-            
-            
-            
-            
-            
+            .itemSelected
+            .subscribe { indexPath in
+                print("Item selected \(String(describing: indexPath.element))")
+                let movie = self.cellViewModel.movies.value[indexPath.element!.row]
+                completion(movie)
+            }
+            .disposed(by: dispozeBag)
     }
 }

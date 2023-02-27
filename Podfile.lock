@@ -774,6 +774,7 @@ PODS:
   - RxRelay (5.1.3):
     - RxSwift (~> 5)
   - RxSwift (5.1.3)
+  - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -785,6 +786,7 @@ DEPENDENCIES:
   - Kingfisher (~> 7.4)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
+  - youtube-ios-player-helper (~> 1.0)
 
 SPEC REPOS:
   trunk:
@@ -815,6 +817,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
@@ -844,7 +847,8 @@ SPEC CHECKSUMS:
   RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
   RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
   RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
+  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 4d3989798862be37735f10b70029ffee37738e2c
+PODFILE CHECKSUM: 21bb1acc772f1e9b0f4d15787922dc2882b22f40
 
 COCOAPODS: 1.11.3

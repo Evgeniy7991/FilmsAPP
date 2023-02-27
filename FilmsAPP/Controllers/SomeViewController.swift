@@ -31,6 +31,14 @@ class SomeViewController: UIViewController {
                 cell.cellViewModel.sendRequest(page: 1, genre: viewModel.id)
                 cell.configureCollection()
                 cell.configureDisplay(genres: viewModel.id)
+                cell.selectItem { [weak self] movie in
+                    guard let controller = self?.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC else {
+                        print("ERRORRRRRRRRRR")
+                        return
+                    }
+                    controller.viewModel.movie.accept(movie)
+                    self?.navigationController?.pushViewController(controller, animated: true)
+                }
             }
             .disposed(by: dispozeBag)
         
@@ -42,5 +50,4 @@ class SomeViewController: UIViewController {
             }
             .disposed(by: dispozeBag)
     }
-
 }
